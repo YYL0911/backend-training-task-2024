@@ -202,7 +202,7 @@ if (performanceData.coaches[0].performance < targetPerformance) {
 // 練習：第二位教練（可將下方程式碼註解移除，完成答題）
 if (performanceData.coaches[1].performance < targetPerformance) {
     // 請填寫第二位教練業績增長程式碼，使用 +=
-    performanceData.coaches[0].performance += (targetPerformance - performanceData.coaches[1].performance);
+    performanceData.coaches[1].performance += (targetPerformance - performanceData.coaches[1].performance);
 }
 
 console.log(performanceData);
