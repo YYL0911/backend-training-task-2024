@@ -128,48 +128,49 @@ if (playerA === '剪刀') {
 
 // 練習：使用物件變數定義兩位教練的資訊
 const gymCoach = {
-coaches: [
-    {
-      name:CoachWan,
-      type:["Strength", "weightLoss"],
-      course: {
-        group:{
-          price: 1500,
-          time: 90,
-          hasClass:false 
-        },
-        personal:{
-          price: 2000,
-          time: 60,
-          hasClass:true
-        }
-      },
-      experience: 5,
-      background: "王教練擁有 5 年教學經驗，專精於提升學員的肌力與減脂，適合希望快速達成體能目標的學員。",
-      acceptNewStudent: true
-  
-    },
-    {
-      name:CoachLi,
-      type:["Yoga", "bodySculpture"],
-      course: {
-        group:{
-          price: 1200,
-          time: 75,
-          hasClass:true
-        },
-        personal:{
-          price: 1800,
-          time: 50,
-          hasClass:false
-        }
-      },
-      experience: 10,
-      background: "李教練是一位瑜伽大師，擁有 10 年教學經驗，擅長幫助學員雕塑完美體態，適合希望改善姿態與柔軟度的學員。",
-      acceptNewStudent: false
-    }
-  }
-];
+        coaches: [
+            {
+              name:"CoachWan",
+              type:["Strength", "weightLoss"],
+              course: {
+                group:{
+                  price: 1500,
+                  time: 90,
+                  hasClass:false 
+                },
+                personal:{
+                  price: 2000,
+                  time: 60,
+                  hasClass:true
+                }
+              },
+              experience: 5,
+              background: "王教練擁有 5 年教學經驗，專精於提升學員的肌力與減脂，適合希望快速達成體能目標的學員。",
+              acceptNewStudent: true
+          
+            },
+            {
+              name:"CoachLi",
+              type:["Yoga", "bodySculpture"],
+              course: {
+                group:{
+                  price: 1200,
+                  time: 75,
+                  hasClass:true
+                },
+                personal:{
+                  price: 1800,
+                  time: 50,
+                  hasClass:false
+                }
+              },
+              experience: 10,
+              background: "李教練是一位瑜伽大師，擁有 10 年教學經驗，擅長幫助學員雕塑完美體態，適合希望改善姿態與柔軟度的學員。",
+              acceptNewStudent: false
+            }
+          
+        ]
+    };
 
 console.log(gymCoach);
 
@@ -241,7 +242,7 @@ let yogaTime = 40;
 
 let bicycleCaloriesTotal = bicycleTime*activities.bicycle.calories;
 let treadmillCaloriesTotal= treadmillTime*activities.treadmill.calories;
-let yogaCaloriesTotal = 0*activities.yoga.calorie;
+let yogaCaloriesTotal = yogaTime*activities.yoga.calories;
 
 calorieBurn += bicycleCaloriesTotal + treadmillCaloriesTotal + yogaCaloriesTotal;
 console.log(`小明今日一共消耗約 ${calorieBurn} 卡路里。`);
