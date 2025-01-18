@@ -76,16 +76,11 @@ function filterNoPurchaseMember(){
         purchaseMember.push(item.name)
     })
 
-    let noPurchaseMemberStr = ""
     let noPurchaseMember = members.filter((item) => {
-        if(!purchaseMember.includes(item)){
-            noPurchaseMemberStr += item + ","
-            return true
-        }
-        else return false
+        return !purchaseMember.includes(item)
     })
 
-    console.log(`未購買課程的會員有：${noPurchaseMemberStr.slice(0,-1)}`)
+    console.log(`未購買課程的會員有：${noPurchaseMember}`)
 }
 
 filterNoPurchaseMember()
