@@ -10,7 +10,7 @@ const unitPeice =[
         price: 1300
     },
     {
-        minCourse: 0,
+        minCourse: 1,
         price: 1500
     }
 ];
@@ -25,7 +25,7 @@ function addPurchaseRecord (name, purchaseCourse){
 
     //輸入無效
     if(name == "" || typeof (purchaseCourse) != "number"){
-        console.log("輸入錯誤，請輸入有效的會員名稱和課程數量。")
+        console.log("輸入錯誤，請輸入有效的會員名稱和課程數量。");
     }
     else{
         //購買課程記錄
@@ -40,6 +40,12 @@ function addPurchaseRecord (name, purchaseCourse){
                 break;
             }
         }
+
+        if(orderInfo.unitPrice == undefined){
+            console.log("輸入錯誤，請輸入有效的會員名稱和課程數量。");
+            return
+        }
+
         // 總金額（courses × 單價）
         orderInfo.totalPrice = orderInfo.unitPrice * orderInfo.coursesTotal;
         
